@@ -13,7 +13,7 @@ Meteor.startup(() => {
   ];
 
   const todosCount = Todos.find().fetch().length;
-  console.error(todosCount);
+
   if (!todosCount) {
     todos.forEach(todo => Todos.insert(todo));
   }
